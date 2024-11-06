@@ -1,42 +1,44 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-top: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.messages {
+  flex-grow: 1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  max-height: 300px;
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.user {
+  text-align: right;
+  color: blue;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.bot {
+  text-align: left;
+  color: green;
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.input-area {
+  display: flex;
+  gap: 10px;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
